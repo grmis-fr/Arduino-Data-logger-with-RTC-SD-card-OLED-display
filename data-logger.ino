@@ -4,16 +4,16 @@
   SD card datalogger
   Arduino UNO
 
-  SD card attached to SPI bus as follows:
+  SD card attached to SPI bus:
   MOSI - pin 11
   MISO - pin 12
   CLK - pin 13
   CS - pin 4
 
-  SSD1306 Oled DISPLAY
-  I2C OLED DISPLAY: SCL = A5  ,  SDA = A4
+  I2C SSD1306 Oled DISPLAY: 
+  SCL = A5  ,  SDA = A4
 
-  RTC module
+  RTC module:
   SCL = A5  ,  SDA = A4
 
 */
@@ -43,7 +43,9 @@ SdFat SD;
 #define filename "data.txt"
 #define date_filename "setdate.txt"
 
-#define minimum_time 200 //Minimum time between two successive change of the input (in ms)
+// Minimum time between two successive change of the input (in ms). Usefull to "de-bounce" the input.
+// You may reduce the delay belo if you expect faster changes on the input pin.
+#define minimum_time 200 
 
 RTClib rtc;
 DS3231 Clock;
