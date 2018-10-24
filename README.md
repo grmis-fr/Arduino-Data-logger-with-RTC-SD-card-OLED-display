@@ -1,4 +1,4 @@
-# Arduino-Data-logger-with-RTC-and-SD-card
+# Arduino-Data-logger-with-RTC-SD-card-OLED-display
 This code is for an Arduino pro-mini connected to:
   - A real time clock (RTC) module (I2C interface).
   - A SD card reader (with SPI interface).
