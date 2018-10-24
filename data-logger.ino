@@ -1,7 +1,6 @@
 //==========================================================
 /*   https://github.com/grmis-fr
 
-
   SD card datalogger
   Arduino UNO
 
@@ -93,9 +92,7 @@ void PrintDate() {
     case 12: Print(F("Dec.")); break;
   }
   Print(" ");
-  //Println(now.year());
-  Print(now.hour()); Print("h"); if (now.minute() < 10) Print("0"); Println(now.minute()); // Print("min:");
-  //Print(now.second()); Println("s");
+  Print(now.hour()); Print("h"); if (now.minute() < 10) Print("0"); Println(now.minute());
 }
 //--------------------------------------------------------
 void Print2file(const String s) {
@@ -245,13 +242,6 @@ void setup() {
 //==========================================================
 unsigned long last_print = 0;
 void loop() {
-  /*
-    if (millis() - last_print > 20000) {
-      last_print = millis();
-      PrintDate();
-      Print(F("Temp. ")); Print(String(Clock.getTemperature(), 1)); Println(" C");
-    }
-  */
   uint8_t input = digitalRead(signal_PIN);
   if (input != last_state) {
     // memorize the time of this input change
