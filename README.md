@@ -18,6 +18,6 @@ It is also possible to set the time and date of the RTC using a special file on 
   - SCL = A5
   - SDA = A4
 
-- I2C RTC module
+- I2C RTC DS3231 module
   - SCL = A5
   - SDA = A4
